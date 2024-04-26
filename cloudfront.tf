@@ -62,7 +62,7 @@ resource "aws_cloudfront_function" "rewrite_and_redirect" {
   runtime = "cloudfront-js-2.0"
   comment = "rewrite to add index.html, redirect bare domain to www"
   publish = true
-  code    = file("rewrite_and_redirect.js")
+  code    = file("${path.module}/rewrite_and_redirect.js")
 }
 
 resource "aws_s3_bucket" "cloudfront_logs" {
