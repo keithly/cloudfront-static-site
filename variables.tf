@@ -21,4 +21,5 @@ variable "cloudfront_logs_prefix" {
 variable "cloudfront_logs_expiration_days" {
   description = "days to keep CloudFront logs"
   type        = number
+  default     = 90
 }
