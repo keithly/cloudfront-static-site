@@ -10,14 +10,14 @@ Config parameters are minimal. This module is designed for the author's use but 
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.5 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.46.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 6.5.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 5.46.0 |
-| <a name="provider_aws.us-east-1"></a> [aws.us-east-1](#provider\_aws.us-east-1) | >= 5.46.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 6.5.0 |
+| <a name="provider_aws.us-east-1"></a> [aws.us-east-1](#provider\_aws.us-east-1) | >= 6.5.0 |
 
 ## Modules
 
@@ -51,11 +51,13 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_bucket_name"></a> [bucket\_name](#input\_bucket\_name) | S3 bucket name | `string` | n/a | yes |
 | <a name="input_bucket_name_cloudfront_logs"></a> [bucket\_name\_cloudfront\_logs](#input\_bucket\_name\_cloudfront\_logs) | S3 bucket name for CloudFront logs | `string` | n/a | yes |
-| <a name="input_cloudfront_logs_expiration_days"></a> [cloudfront\_logs\_expiration\_days](#input\_cloudfront\_logs\_expiration\_days) | days to keep CloudFront logs | `number` | n/a | yes |
+| <a name="input_cloudfront_logs_expiration_days"></a> [cloudfront\_logs\_expiration\_days](#input\_cloudfront\_logs\_expiration\_days) | days to keep CloudFront logs | `number` | `90` | no |
 | <a name="input_cloudfront_logs_prefix"></a> [cloudfront\_logs\_prefix](#input\_cloudfront\_logs\_prefix) | S3 prefix for CloudFront logs | `string` | n/a | yes |
 | <a name="input_domain_name"></a> [domain\_name](#input\_domain\_name) | Domain name of the site / existing Route53 hosted zone name | `string` | n/a | yes |
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_cloudfront_distribution_id"></a> [cloudfront\_distribution\_id](#output\_cloudfront\_distribution\_id) | n/a |
 <!-- END_TF_DOCS -->
