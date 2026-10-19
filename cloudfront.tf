@@ -58,7 +58,7 @@ resource "aws_cloudfront_origin_access_control" "site" {
 
 
 resource "aws_cloudfront_function" "rewrite_and_redirect" {
-  name    = "rewrite_and_redirect"
+  name    = "${replace(var.domain_name, ".", "-")}_rewrite_and_redirect"
   runtime = "cloudfront-js-2.0"
   comment = "rewrite to add index.html, redirect bare domain to www"
   publish = true
